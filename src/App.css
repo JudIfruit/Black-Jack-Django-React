@@ -105,7 +105,7 @@ li {
 
 .todosuppr {
   flex: 15%;
-  background: transparent;
+  background: red;
   border: none;
   color: red;
   font-size: 20px; /
