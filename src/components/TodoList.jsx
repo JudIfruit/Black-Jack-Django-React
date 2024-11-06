@@ -29,13 +29,13 @@ export default function TodoList() {
     return (
         <div>
             <h2>Todo List</h2>
-            <input
+            <input className="addlist"
                 type="text"
                 value={newTodo}
                 onChange={(e) => setNewTodo(e.target.value)}
                 placeholder="Ajouter à la liste"
             />
-            <button onClick={addTodo}>Ajoutez</button>
+            <button className="button" onClick={addTodo}>Ajoutez</button>
             <ul>
                 {todos.map((todo, index) => (
                     <li key={index}>
