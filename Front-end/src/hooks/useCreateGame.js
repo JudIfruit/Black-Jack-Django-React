@@ -2,7 +2,7 @@ export default function useCreateGame() {
     const createGame = ({ players }) => {
         const gameData = {
             name: "Black Jack",
-            players: players  // Seuls les noms des joueurs sont envoyés
+            players: players
         };
 
         console.log("Données envoyées :", gameData);

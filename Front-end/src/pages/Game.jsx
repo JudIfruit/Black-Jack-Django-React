@@ -19,7 +19,6 @@ export default function Game() {
     };
 
     const handleCreateGame = () => {
-        // Ajouter le croupier comme joueur
         createGame({ players: [...players, 'Croupier'] })
             .then(data => {
                 setGameData({
@@ -27,7 +26,6 @@ export default function Game() {
                     scores: Array(players.length + 1).fill(0),
                     turnsPassed: Array(players.length + 1).fill(false)
                 });
-                // Croupier joue d'abord
                 dealerPlay();
             })
             .catch(error => console.error(error));
@@ -61,7 +59,6 @@ export default function Game() {
             return { ...prev, scores: updatedScores };
         });
 
-        // Si le score dépasse 21, on passe le tour automatiquement
         if (newScore >= 21) {
             passTurn();
         }
@@ -81,7 +78,7 @@ export default function Game() {
             score += rollDice(1 + Math.floor(Math.random() * 3));
         }
         setDealerScore(score);
-        nextTurn(); // Après que le croupier ait joué, passer au joueur suivant
+        nextTurn();
     };
 
     const nextTurn = () => {
@@ -92,30 +89,25 @@ export default function Game() {
         }
 
         if (nextTurn >= players.length) {
-            determineWinner(); // Si tous les joueurs ont joué, déterminer le gagnant
+            determineWinner();
         } else {
             setCurrentTurn(nextTurn);
         }
     };
 
     const determineWinner = () => {
-        // Filtre les scores valides (pas de "Bust", et <= 21)
         const validScores = gameData.scores.filter(score => typeof score === "number" && score <= 21);
 
-        // Inclut le score du croupier dans la comparaison
         const validDealerScore = dealerScore <= 21 ? dealerScore : null;
         const allScores = [...validScores, validDealerScore];
 
-        // Trouve le score le plus élevé sans dépasser 21
         const highestScore = Math.max(...allScores);
 
-        // Si plusieurs ont le même score élevé, ce sont les gagnants
         const winners = players.filter((player, idx) => gameData.scores[idx] === highestScore);
         if (validDealerScore === highestScore) {
             winners.push("Croupier");
         }
 
-        // Détermine si le croupier gagne ou non
         if (winners.length === 0) {
             setWinner("Aucun gagnant");
         } else {

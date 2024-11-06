@@ -1,8 +1,30 @@
-# React + Vite
+# Projet Blackjack Django
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Par Julien PONS
 
-Currently, two official plugins are available:
+Ce projet est un jeu de Blackjack développé avec Django pour le back-end et React pour le front-end. Le but est de simuler un jeu de cartes ou dés avec des interactions entre un ou plusieurs joueurs et un croupier.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## Front-end
+
+1. **Installer les dépendances front-end** :
+
+   Dans le répertoire du front-end, exécute la commande suivante pour installer toutes les dépendances nécessaires :
+
+   ```bash
+   npm i
+
+2. **Installer les dépendances back-end** :
+
+   Dans le répertoire du back-end, exécute la commande suivante pour installer toutes les dépendances nécessaires :
+
+   ```bash
+   - python -m venv .venv 
+   - .venv\Scripts\activate 
+   - python.exe -m pip install --upgrade pip  
+   - pip install Django 
+   - pip install Django-ninja 
+   - pip install django-cors-headers
+   - python manage.py runserver
+
