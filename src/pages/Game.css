@@ -1,0 +1,133 @@
+/* Styles pour l'application */
+.game-container {
+    width: 1280px;
+    height: 550px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    gap: 10rem;
+}
+
+/* Colonne de gauche */
+.left-game {
+    text-align: center;
+    flex: 1;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px;
+}
+
+.left-game h2{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left-game h2 h3{
+    color: darkorange;
+    margin-left: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Colonne de droite */
+.right-game {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px;
+}
+
+.right-game h2{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: underline;
+}
+
+.left-game h1{
+    color: darkorange;
+}
+
+
+.right-game ul{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.right-game li{
+    margin: 5px 15%;
+}
+
+.right-game li button{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.right-game h1{
+    color: darkorange;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.right-game-tableau{
+    flex: 1;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.addplayer{
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.create-game{
+    background-color: darkorange;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.croupier{
+    color: darkorange;
+    font-weight: Bold;
+}
+
+.desbutton{
+    display: flex;
+    justify-content: center;
+}
+
+.desbutton button{
+    background-color: darkorange;
+    padding: 10px;
+    margin: 50px 10px;
+    border-radius: 8px;
+}
+
+.passbutton{
+    display: flex;
+    justify-content: center;
+}
+
+.passbutton button{
+    padding: 10px;
+    border-radius: 8px;
+    background: red;
+}
+
+.winner{
+    color: darkorange;
+    font-weight: bold;
+}
