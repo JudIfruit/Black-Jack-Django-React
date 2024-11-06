@@ -3,7 +3,7 @@ import './home.css';
 import CounterButton from "../components/CounterButton.jsx";
 import PlayerTable from "../components/PlayerTable.jsx";
 import TodoList from "../components/TodoList.jsx";
-import { Link } from 'react-router-dom'; // Importer Link
+import { Link } from 'react-router-dom';
 
 function Home() {
     const [count, setCount] = useState(0);
@@ -16,27 +16,24 @@ function Home() {
 
     return (
         <div>
-            <Link to="/game"> {/* Lien vers la page des jeux */}
+            <Link to="/game">
                 Game
             </Link>
-        <div className="app-container">
-            {/* Left Column */}
-            <div className="left-column">
-                <div className="card">
-                    <CounterButton />
+            <div className="app-container">
+                <div className="left-column">
+                    <div className="card">
+                        <CounterButton />
+                    </div>
+                    <div className="player-table-container">
+                        <PlayerTable players={players} />
+                    </div>
                 </div>
-                <div className="player-table-container">
-                    <PlayerTable players={players} />
-                </div>
-            </div>
-
-            {/* Right Column */}
-            <div className="right-column">
-                <div className="todo-container">
-                    <TodoList />
+                <div className="right-column">
+                    <div className="todo-container">
+                        <TodoList />
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     )
 }
